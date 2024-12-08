@@ -19,4 +19,11 @@ def main():
 
 
 if __name__ == '__main__':
+    # For deployment (like Heroku) where the platform provides a dynamic PORT
+    if 'PORT' in os.environ:
+        port = os.environ['PORT']
+        sys.argv.append(f'runserver 0.0.0.0:{port}')
+    else:
+        sys.argv.append('runserver 0.0.0.0:8000')
+
     main()

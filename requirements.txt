@@ -2,3 +2,5 @@ django-allauth==65.3.0
 requests
 PyJWT
 cryptography
+pillow==11.0.0
+
